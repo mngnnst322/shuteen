@@ -2,25 +2,50 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  /* Brand palette — цэнхэр / цагаан */
+  --brand-50: #eef6ff;
+  --brand-100: #d9ecff;
+  --brand-200: #b6d8ff;
+  --brand-300: #84bcff;
+  --brand-400: #4f97ff;
+  --brand-500: #2474f0;
+  --brand-600: #1559d6;
+  --brand-700: #1247ad;
+  --brand-800: #143d8a;
+  --brand-900: #16356f;
+  --brand-950: #0f2147;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+
+  --font-sans: var(--font-roboto), system-ui, sans-serif;
+  --font-display: var(--font-roboto), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  /* Тогтмол толгойн өндрөөр anchor-н тэгшилгээ засах */
+  scroll-padding-top: 5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
