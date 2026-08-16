@@ -78,8 +78,6 @@ export function Calculator() {
   const [configIdx, setConfigIdx] = useState(0);
   const [innerColor, setInnerColor] = useState(COLORS[0]);
   const [diffOuter, setDiffOuter] = useState(false);
-  const [hasSeal, setHasSeal] = useState(false);
-  const [hasSill, setHasSill] = useState(false);
   const [showColors, setShowColors] = useState(false);
 
   const design = DESIGNS.find((d) => d.id === designId)!;
@@ -95,10 +93,8 @@ export function Calculator() {
       configIndex: configIdx,
       innerColor: innerColor.id,
       differentOuterColor: diffOuter,
-      seal: hasSeal,
-      sill: hasSill,
     }),
-    [design, configIdx, innerColor, diffOuter, hasSeal, hasSill]
+    [design, configIdx, innerColor, diffOuter]
   );
 
   function selectDesign(id: string) {
@@ -136,22 +132,30 @@ export function Calculator() {
       <div className="mt-4 flex flex-wrap gap-3">
         {configs.map((cfg, i) => {
           const active = i === configIdx;
+          // Онгойлтын төрлийг тайлбарлана (олон хавтгайтай бол "+" -ээр холбоно)
+          const openingLabel = cfg.panes.map((p) => c.openings[p]).join(" + ");
           return (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setConfigIdx(i)}
-              aria-label={`${c.config} ${i + 1}`}
-              className={`grid h-20 w-20 place-items-center rounded-xl border p-2 transition-colors ${
-                active
-                  ? "border-brand-300 bg-brand-50"
-                  : "border-slate-200 bg-white hover:border-slate-300"
-              }`}
-            >
-              <div className="h-full w-full">
-                <Schematic config={cfg} />
-              </div>
-            </button>
+            <div key={i} className="flex w-24 flex-col items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => setConfigIdx(i)}
+                aria-label={`${c.config} ${i + 1}`}
+                className={`grid h-20 w-20 place-items-center rounded-xl border p-2 transition-colors ${
+                  active
+                    ? "border-brand-300 bg-brand-50"
+                    : "border-slate-200 bg-white hover:border-slate-300"
+                }`}
+              >
+                <div className="h-full w-full">
+                  <Schematic config={cfg} />
+                </div>
+              </button>
+              {openingLabel && (
+                <span className="text-center text-xs leading-tight text-slate-500">
+                  {openingLabel}
+                </span>
+              )}
+            </div>
           );
         })}
       </div>
@@ -220,8 +224,6 @@ export function Calculator() {
           {/* Toggle-ууд */}
           <div className="mt-2 divide-y divide-slate-100">
             <Toggle checked={diffOuter} onChange={setDiffOuter} label={c.toggleOuter} />
-            <Toggle checked={hasSeal} onChange={setHasSeal} label={c.toggleSeal} />
-            <Toggle checked={hasSill} onChange={setHasSill} label={c.toggleSill} />
           </div>
 
           {/* Захиалга — selection-г backend руу дамжуулна */}

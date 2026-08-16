@@ -27,10 +27,10 @@ export type Design = {
 };
 
 export const DESIGNS: Design[] = [
-  { id: "one", label: "Нэг цонх", panesCount: 1, image: "/tsonkh-nariin-animated.svg" },
-  { id: "two", label: "Хоёр цонх", panesCount: 2, image: "/tsonkh-hoyor-nariin-animated.svg" },
-  { id: "three", label: "Гурав цонх", panesCount: 3, image: "/tsonkh-gurav-nariin-animated.svg" },
-  { id: "door", label: "Тагттай цонх", panesCount: 1, door: true, image: "/tagt-haalga-tsonkh-animated.svg" },
+  { id: "one", label: "Нэг хуваалт", panesCount: 1, image: "/tsonkh-nariin-animated.svg" },
+  { id: "two", label: "Хоёр хуваалт", panesCount: 2, image: "/tsonkh-hoyor-nariin-animated.svg" },
+  { id: "three", label: "Гурав хуваалт", panesCount: 3, image: "/tsonkh-gurav-nariin-animated.svg" },
+  { id: "door", label: "Тагттай хуваалт", panesCount: 1, door: true, image: "/tagt-haalga-tsonkh-animated.svg" },
 ];
 
 export const CONFIGS: Record<string, WindowConfig[]> = {
