@@ -24,9 +24,7 @@ export default function LoginPage() {
     <div className="grid min-h-[70vh] place-items-center px-6 py-16">
       <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <div className="flex flex-col items-center">
-          <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-600 font-display text-lg font-bold text-white">
-            {company.shortName}
-          </span>
+          <img src="/logo.png" alt={company.name} className="h-12 w-auto" />
           <h1 className="mt-4 font-display text-xl font-bold text-slate-900">{l.title}</h1>
           <p className="text-sm text-slate-500">{l.subtitle}</p>
         </div>

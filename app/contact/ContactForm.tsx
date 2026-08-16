@@ -45,7 +45,7 @@ export function ContactForm() {
       </div>
       <button
         type="submit"
-        className="w-full rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-700"
+        className="w-full rounded-full bg-accent-500 px-6 py-3 font-semibold text-brand-950 transition-colors hover:bg-accent-600"
       >
         {f.submit}
       </button>

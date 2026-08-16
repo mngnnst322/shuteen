@@ -30,16 +30,7 @@ export default function HeroSlider() {
           style={{ background: s.bg }}
         >
           {/* харанхуй давхарга — текст уншигдахуйц байх */}
-          <div className="absolute inset-0 bg-black/30" />
-          {/* барилгын торон сэдэв (placeholder) */}
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage:
-                "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-              backgroundSize: "64px 64px",
-            }}
-          />
+          <div className="absolute inset-0 bg-black/20" />
 
           <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6">
             <h1 className="max-w-3xl font-display text-3xl font-black uppercase leading-tight sm:text-5xl">
@@ -51,7 +42,7 @@ export default function HeroSlider() {
             <div className="mt-8">
               <Link
                 href={s.ctaHref}
-                className="inline-block rounded-md bg-brand-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-brand-700"
+                className="inline-block rounded-md bg-accent-500 px-8 py-3 font-semibold text-brand-950 transition-colors hover:bg-accent-600"
               >
                 {s.ctaLabel}
               </Link>

@@ -41,7 +41,7 @@ export default function ServicesPage() {
           <p className="mt-3 text-slate-600">{servicesPage.ctaSubtitle}</p>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-full bg-brand-600 px-8 py-3 font-semibold text-white hover:bg-brand-700"
+            className="mt-6 inline-block rounded-full bg-accent-500 px-8 py-3 font-semibold text-brand-950 hover:bg-accent-600"
           >
             {servicesPage.ctaButton}
           </Link>

@@ -7,7 +7,7 @@ export default function AdminProducts() {
       <AdminTitle
         title="Бүтээгдэхүүн ба үйлчилгээ"
         action={
-          <button className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white">
+          <button className="rounded-lg bg-accent-500 px-4 py-2 text-sm font-medium text-brand-950">
             + Шинээр нэмэх
           </button>
         }
@@ -20,7 +20,7 @@ export default function AdminProducts() {
             <td className="max-w-md px-5 py-3 text-slate-600">{s.description}</td>
             <td className="px-5 py-3">
               <div className="flex gap-3">
-                <button className="text-sm font-medium text-brand-600 hover:text-brand-700">Засах</button>
+                <button className="text-sm font-medium text-accent-700 hover:text-accent-800">Засах</button>
                 <button className="text-sm font-medium text-red-500 hover:text-red-600">Устгах</button>
               </div>
             </td>

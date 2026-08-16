@@ -18,7 +18,17 @@ export default function ProjectsPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
               <div key={p.title} className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-                <Placeholder label={p.title} className="aspect-[4/3] w-full rounded-none transition-transform group-hover:scale-[1.02]" />
+                {p.image ? (
+                  <div className="aspect-[4/3] w-full overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="h-full w-full object-cover transition-transform group-hover:scale-[1.02]"
+                    />
+                  </div>
+                ) : (
+                  <Placeholder label={p.title} className="aspect-[4/3] w-full rounded-none transition-transform group-hover:scale-[1.02]" />
+                )}
                 <div className="p-6">
                   <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700">
                     {p.category}

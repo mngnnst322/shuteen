@@ -58,7 +58,11 @@ export default function Home() {
       {/* Бидний тухай */}
       <section className="py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
-          <Placeholder label={home.aboutTitle} className="aspect-video w-full" />
+          <img
+            src="/tsonkh-about.jpg"
+            alt={home.aboutTitle}
+            className="aspect-video w-full rounded-xl object-cover"
+          />
           <div>
             <h2 className="font-display text-3xl font-bold text-slate-900">{home.aboutTitle}</h2>
             <p className="mt-4 leading-7 text-slate-600">{company.intro}</p>
@@ -74,7 +78,7 @@ export default function Home() {
             </ul>
             <Link
               href="/about"
-              className="mt-8 inline-block rounded-full bg-brand-600 px-7 py-3 font-semibold text-white hover:bg-brand-700"
+              className="mt-8 inline-block rounded-full bg-accent-500 px-7 py-3 font-semibold text-brand-950 hover:bg-accent-600"
             >
               {home.aboutCta}
             </Link>
@@ -97,7 +101,13 @@ export default function Home() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.slice(0, 3).map((p) => (
               <div key={p.title} className="overflow-hidden rounded-2xl bg-white shadow-sm">
-                <Placeholder label={p.title} className="aspect-[4/3] w-full rounded-none" />
+                {p.image ? (
+                  <div className="aspect-[4/3] w-full overflow-hidden">
+                    <img src={p.image} alt={p.title} className="h-full w-full object-cover" />
+                  </div>
+                ) : (
+                  <Placeholder label={p.title} className="aspect-[4/3] w-full rounded-none" />
+                )}
                 <div className="p-5">
                   <span className="text-xs font-medium text-brand-600">{p.category}</span>
                   <h3 className="mt-1 font-display font-semibold text-slate-900">{p.title}</h3>

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { company } from "../../lib/site";
 import { useAuth } from "../../lib/providers";
 
-const field = "mt-1 w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100";
+const field = "mt-1 w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-100";
 
 export default function AdminLogin() {
   const { login } = useAuth();
@@ -22,9 +22,7 @@ export default function AdminLogin() {
     <div className="grid min-h-screen place-items-center p-6">
       <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <div className="flex flex-col items-center">
-          <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-600 font-display text-lg font-bold text-white">
-            {company.shortName}
-          </span>
+          <img src="/logo.png" alt={company.name} className="h-12 w-auto" />
           <h1 className="mt-4 font-display text-xl font-bold text-slate-900">Админ нэвтрэх</h1>
           <p className="text-sm text-slate-500">{company.name}</p>
         </div>
@@ -40,7 +38,7 @@ export default function AdminLogin() {
           </div>
           <button
             type="submit"
-            className="block w-full rounded-lg bg-brand-600 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-700"
+            className="block w-full rounded-lg bg-accent-500 px-5 py-2.5 text-center text-sm font-semibold text-brand-950 hover:bg-accent-600"
           >
             Нэвтрэх
           </button>

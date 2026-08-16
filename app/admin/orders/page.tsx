@@ -27,7 +27,7 @@ export default function AdminOrders() {
               <Badge color={statusColor(o.status) as "green" | "amber" | "blue" | "slate"}>{o.status}</Badge>
             </td>
             <td className="px-5 py-3 text-right">
-              <button className="text-sm font-medium text-brand-600 hover:text-brand-700">Үзэх</button>
+              <button className="text-sm font-medium text-accent-700 hover:text-accent-800">Үзэх</button>
             </td>
           </tr>
         ))}

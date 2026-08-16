@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 700" width="620" height="700">
+  <defs>
+    <linearGradient id="frameOuter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#f2f4f6"/>
+      <stop offset="1" stop-color="#dfe3e8"/>
+    </linearGradient>
+    <linearGradient id="frameInner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8ebee"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eceff2"/>
+    </linearGradient>
+    <linearGradient id="sash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f5f7f9"/>
+      <stop offset="1" stop-color="#e2e6ea"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef4fa"/>
+      <stop offset="0.45" stop-color="#e2ecf5"/>
+      <stop offset="1" stop-color="#d5e2ee"/>
+    </linearGradient>
+    <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#e9ecef"/>
+      <stop offset="1" stop-color="#cfd5db"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0b0f2b" flood-opacity="0.14"/>
+    </filter>
+    <filter id="tinyShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#0b0f2b" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <style>
+    .door-sash {
+      transform-origin: 54px 380px;
+      animation: openDoorB 8s ease-in-out infinite;
+    }
+    .win-sash {
+      transform-origin: 448px 636px;
+      animation: tiltWinB 8s ease-in-out infinite;
+    }
+    .int-door { animation: dkDoorB 8s ease-in-out infinite; }
+    .int-win  { animation: dkWinB 8s ease-in-out infinite; }
+
+    /* Тагтны хаалга — зүүн нугасаараа эргэж нээгдэнэ */
+    @keyframes openDoorB {
+      0%, 12%  { transform: scaleX(1) skewY(0deg); }
+      35%, 55% { transform: scaleX(0.26) skewY(-6deg); }
+      85%, 100%{ transform: scaleX(1) skewY(0deg); }
+    }
+    /* Хажуугийн цонх — tilt (дээрээсээ дотогш налж нээгдэнэ) */
+    @keyframes tiltWinB {
+      0%, 25%  { transform: scaleY(1) scaleX(1); }
+      50%, 68% { transform: scaleY(0.91) scaleX(1.03); }
+      93%, 100%{ transform: scaleY(1) scaleX(1); }
+    }
+    @keyframes dkDoorB { 0%, 12% { opacity: 0; } 35%, 55% { opacity: 1; } 85%, 100% { opacity: 0; } }
+    @keyframes dkWinB  { 0%, 25% { opacity: 0; } 50%, 68% { opacity: 0.55; } 93%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .door-sash, .win-sash, .int-door, .int-win { animation: none; }
+    }
+  </style>
+
+  <!-- Outer frame: хаалга бүх өндрөөр, цонх баруун дээд хэсэгт -->
+  <g filter="url(#softShadow)">
+    <rect x="24" y="24" width="572" height="652" rx="6" fill="url(#frameOuter)" stroke="#c7ccd2" stroke-width="1.5"/>
+  </g>
+  <rect x="42" y="42" width="536" height="616" rx="4" fill="url(#frameInner)" stroke="#c2c8ce" stroke-width="1"/>
+  <rect x="50" y="50" width="520" height="600" rx="3" fill="none" stroke="#aeb5bc" stroke-width="1.5"/>
+
+  <!-- Нээгдэхэд харагдах дотор орчин -->
+  <rect class="int-door" x="54" y="54" width="250" height="592" fill="#2a3242" opacity="0"/>
+  <rect class="int-win"  x="318" y="54" width="248" height="360" fill="#2a3242" opacity="0"/>
+
+  <!-- Босоо хуваалт: хаалга ба цонхны хооронд -->
+  <rect x="304" y="54" width="14" height="592" fill="url(#frameOuter)" stroke="#bfc5cb" stroke-width="1"/>
+  <!-- Цонхны доорх дүүргэлт хавтан (fixed panel) -->
+  <rect x="318" y="414" width="14" height="0" fill="none"/>
+  <rect x="318" y="414" width="248" height="14" fill="url(#frameOuter)" stroke="#bfc5cb" stroke-width="1"/>
+  <rect x="322" y="432" width="240" height="210" rx="2" fill="url(#sash)" stroke="#bfc5cb" stroke-width="1.5"/>
+  <rect x="340" y="450" width="204" height="174" rx="2" fill="#eef1f4" stroke="#b4bac1" stroke-width="1"/>
+  <rect x="348" y="458" width="188" height="158" fill="url(#glass)" stroke="#9fb3c6" stroke-width="1"/>
+  <polygon points="348,458 422,458 372,616 348,616" fill="url(#glassSheen)"/>
+
+  <!-- ТАГТНЫ ХААЛГА — бүх өндрөөр, нугас зүүн талд -->
+  <g class="door-sash">
+    <rect x="54" y="54" width="250" height="592" rx="3" fill="url(#sash)" stroke="#bfc5cb" stroke-width="1.5"/>
+    <rect x="74" y="74" width="210" height="552" rx="2" fill="#eef1f4" stroke="#b4bac1" stroke-width="1"/>
+    <rect x="82" y="82" width="194" height="536" fill="url(#glass)" stroke="#9fb3c6" stroke-width="1"/>
+    <polygon points="82,82 158,82 106,618 82,618" fill="url(#glassSheen)"/>
+    <polygon points="180,82 214,82 136,618 112,618" fill="#ffffff" opacity="0.22"/>
+    <!-- Нугас 3 ширхэг (хаалганд илүү жинтэй тул) -->
+    <rect x="48" y="95"  width="8" height="34" rx="2" fill="#d6dade" stroke="#b0b6bc" stroke-width="0.8"/>
+    <rect x="48" y="333" width="8" height="34" rx="2" fill="#d6dade" stroke="#b0b6bc" stroke-width="0.8"/>
+    <rect x="48" y="571" width="8" height="34" rx="2" fill="#d6dade" stroke="#b0b6bc" stroke-width="0.8"/>
+    <!-- Хаалганы бариул — гар хүрэх өндөрт -->
+    <g filter="url(#tinyShadow)">
+      <rect x="283" y="338" width="14" height="26" rx="4" fill="url(#handle)" stroke="#b8bec5" stroke-width="1"/>
+      <rect x="286" y="350" width="8" height="80" rx="4" fill="url(#handle)" stroke="#b8bec5" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- ХАЖУУГИЙН ЦОНХ — дээд хэсэгт, tilt нээлттэй -->
+  <g class="win-sash">
+    <rect x="318" y="54" width="248" height="360" rx="3" fill="url(#sash)" stroke="#bfc5cb" stroke-width="1.5"/>
+    <rect x="338" y="74" width="208" height="320" rx="2" fill="#eef1f4" stroke="#b4bac1" stroke-width="1"/>
+    <rect x="346" y="82" width="192" height="304" fill="url(#glass)" stroke="#9fb3c6" stroke-width="1"/>
+    <polygon points="346,82 422,82 370,386 346,386" fill="url(#glassSheen)"/>
+    <polygon points="444,82 478,82 400,386 376,386" fill="#ffffff" opacity="0.22"/>
+    <!-- Хэвтээ бариул доод хэсэгт -->
+    <g filter="url(#tinyShadow)">
+      <rect x="431" y="390" width="24" height="13" rx="4" fill="url(#handle)" stroke="#b8bec5" stroke-width="1"/>
+      <rect x="411" y="393" width="62" height="7" rx="3.5" fill="url(#handle)" stroke="#b8bec5" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

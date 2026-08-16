@@ -134,6 +134,7 @@ export const projects: Project[] = [
   { title: "Цагаан хуаран", location: "Улаанбаатар", year: "2021", category: "Орон сууц" },
   { title: "Нэхмэл-8", location: "Улаанбаатар", year: "2021", category: "Орон сууц" },
   { title: "Гашуунсухайт", location: "Умнөговь", year: "2020", category: "Үйлдвэрийн барилга" },
+  { title: "Алтан намар хотхон", location: "Улаанбаатар", year: "2020", category: "Орон сууц" },
   { title: "SGD-88", location: "Улаанбаатар", year: "2020", category: "Оффис" },
   { title: "Тэлмү Виллаж", location: "Улаанбаатар", year: "2021", category: "Хувийн орон сууц" },
   { title: "Дөлгөөн Алтай Апартмент", location: "Улаанбаатар", year: "2020", category: "Орон сууц" },

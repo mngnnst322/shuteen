@@ -40,9 +40,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   const Sidebar = (
     <aside className="flex h-full w-64 shrink-0 flex-col border-r border-slate-200 bg-white">
       <Link href="/admin" className="flex items-center gap-3 px-6 py-5">
-        <span className="grid h-10 w-10 place-items-center rounded-lg bg-brand-600 font-bold text-white">
-          {company.shortName}
-        </span>
+        <img src="/logo.png" alt={company.name} className="h-8 w-auto" />
         <span className="font-display font-bold text-slate-900">Админ</span>
       </Link>
       <nav className="flex-1 space-y-1 px-3 py-2">
@@ -53,7 +51,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             onClick={() => setOpen(false)}
             className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
               isActive(m.href)
-                ? "bg-brand-50 text-brand-700"
+                ? "bg-accent-50 text-accent-700"
                 : "text-slate-600 hover:bg-slate-100"
             }`}
           >
@@ -101,7 +99,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             ☰
           </button>
           <div className="text-sm text-slate-500">Тавтай морил, Админ 👋</div>
-          <div className="grid h-9 w-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">
+          <div className="grid h-9 w-9 place-items-center rounded-full bg-accent-100 text-sm font-bold text-accent-700">
             A
           </div>
         </header>

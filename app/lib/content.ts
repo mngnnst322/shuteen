@@ -20,16 +20,16 @@ const shared = {
 
 export type NavItem = { label: string; href: string };
 export type Service = { title: string; description: string; icon: string };
-export type Project = { title: string; location: string; year: string; category: string };
+export type Project = { title: string; location: string; year: string; category: string; image?: string };
 export type NewsItem = { slug: string; title: string; date: string; excerpt: string };
 export type Stat = { value: string; label: string };
 export type Fact = { icon: string; label: string; value: string };
 export type Slide = { heading: string; subtitle: string; ctaLabel: string; ctaHref: string; bg: string };
 
 const SLIDE_BG = [
-  "linear-gradient(120deg, #1e293b 0%, #334155 45%, #475569 100%)",
-  "linear-gradient(120deg, #16356f 0%, #143d8a 50%, #1559d6 100%)",
-  "linear-gradient(120deg, #0f2147 0%, #1247ad 55%, #2474f0 100%)",
+  "url(/tsonkh-hero.jpg) center/cover no-repeat",
+  "url(/tsonkh-hero.jpg) center/cover no-repeat",
+  "url(/tsonkh-hero.jpg) center/cover no-repeat",
 ];
 
 // ===========================================================================
@@ -144,18 +144,19 @@ const mn = {
   },
 
   projects: [
-    { title: "Дүнжингарав хороолол", location: "Улаанбаатар", year: "2023", category: "Орон сууц" },
-    { title: "Олимп хороолол", location: "Улаанбаатар", year: "2022", category: "Орон сууц" },
-    { title: "Амгалан хотхон", location: "Улаанбаатар", year: "2022", category: "Орон сууц" },
-    { title: "Эрдэнэт 7-р хороолол", location: "Эрдэнэт", year: "2021", category: "Орон сууц" },
-    { title: "Цагаан хуаран", location: "Улаанбаатар", year: "2021", category: "Орон сууц" },
-    { title: "Нэхмэл-8", location: "Улаанбаатар", year: "2021", category: "Орон сууц" },
-    { title: "Гашуунсухайт", location: "Умнөговь", year: "2020", category: "Үйлдвэрийн барилга" },
-    { title: "SGD-88", location: "Улаанбаатар", year: "2020", category: "Оффис" },
-    { title: "Тэлмү Виллаж", location: "Улаанбаатар", year: "2021", category: "Хувийн орон сууц" },
-    { title: "Дөлгөөн Алтай Апартмент", location: "Улаанбаатар", year: "2020", category: "Орон сууц" },
-    { title: "Агарта Ресиденс", location: "Улаанбаатар", year: "2020", category: "Орон сууц" },
-    { title: "Консул Ресиденс", location: "Улаанбаатар", year: "2019", category: "Орон сууц" },
+    { title: "Дүнжингарав хороолол", location: "Улаанбаатар", year: "2023", category: "Орон сууц", image: "/projects/dunjingarav.jpg" },
+    { title: "Олимп хороолол", location: "Улаанбаатар", year: "2022", category: "Орон сууц", image: "/projects/olymp.jpg" },
+    { title: "Амгалан хотхон", location: "Улаанбаатар", year: "2022", category: "Орон сууц", image: "/projects/amgalan.jpg" },
+    { title: "Эрдэнэт 7-р хороолол", location: "Эрдэнэт", year: "2021", category: "Орон сууц", image: "/projects/erdenet7.jpg" },
+    { title: "Цагаан хуаран", location: "Улаанбаатар", year: "2021", category: "Орон сууц", image: "/projects/tsagaankhuaran.jpg" },
+    { title: "Нэхмэл-8", location: "Улаанбаатар", year: "2021", category: "Орон сууц", image: "/projects/nekhmel8.jpg" },
+    { title: "Гашуунсухайт", location: "Умнөговь", year: "2020", category: "Үйлдвэрийн барилга", image: "/projects/gashuunsukhait.jpg" },
+    { title: "Алтан намар хотхон", location: "Улаанбаатар", year: "2020", category: "Орон сууц", image: "/projects/altannamar.jpg" },
+    { title: "SGD-88", location: "Улаанбаатар", year: "2020", category: "Оффис", image: "/projects/sgd88.jpg" },
+    { title: "Тэлмү Виллаж", location: "Улаанбаатар", year: "2021", category: "Хувийн орон сууц", image: "/projects/telmu.jpg" },
+    { title: "Дөлгөөн Алтай Апартмент", location: "Улаанбаатар", year: "2020", category: "Орон сууц", image: "/projects/dulguun.jpg" },
+    { title: "Агарта Ресиденс", location: "Улаанбаатар", year: "2020", category: "Орон сууц", image: "/projects/agarta.jpg" },
+    { title: "Консул Ресиденс", location: "Улаанбаатар", year: "2019", category: "Орон сууц", image: "/projects/konsul.jpg" },
   ] as Project[],
 
   projectsPage: {
@@ -202,7 +203,7 @@ const mn = {
     projectNames: [
       "Дүнжингарав хороолол", "Олимп хороолол", "Амгалан хотхон", "Эрдэнэт 7-р хороолол",
       "Цагаан хуаран", "Нэхмэл-8", "Гашуунсухайт", "SGD-88", "Тэлмү Виллаж",
-      "Дөлгөөн Алтай Апартмент", "Агарта Ресиденс", "Консул Ресиденс",
+      "Дөлгөөн Алтай Апартмент", "Агарта Ресиденс", "Консул Ресиденс", "Алтан намар хотхон",
     ],
   },
 
@@ -379,18 +380,19 @@ const en: typeof mn = {
   },
 
   projects: [
-    { title: "Dunjingarav District", location: "Ulaanbaatar", year: "2023", category: "Residential" },
-    { title: "Olymp District", location: "Ulaanbaatar", year: "2022", category: "Residential" },
-    { title: "Amgalan Residential Area", location: "Ulaanbaatar", year: "2022", category: "Residential" },
-    { title: "Erdenet 7th District", location: "Erdenet", year: "2021", category: "Residential" },
-    { title: "Tsagaan Khuaran", location: "Ulaanbaatar", year: "2021", category: "Residential" },
-    { title: "Nekhmel-8", location: "Ulaanbaatar", year: "2021", category: "Residential" },
-    { title: "Gashuunsukhait", location: "Umnugovi", year: "2020", category: "Industrial building" },
-    { title: "SGD-88", location: "Ulaanbaatar", year: "2020", category: "Office" },
-    { title: "Telmu Village", location: "Ulaanbaatar", year: "2021", category: "Private residence" },
-    { title: "Dulguun Altai Apartment", location: "Ulaanbaatar", year: "2020", category: "Residential" },
-    { title: "Agarta Residence", location: "Ulaanbaatar", year: "2020", category: "Residential" },
-    { title: "Consul Residence", location: "Ulaanbaatar", year: "2019", category: "Residential" },
+    { title: "Dunjingarav District", location: "Ulaanbaatar", year: "2023", category: "Residential", image: "/projects/dunjingarav.jpg" },
+    { title: "Olymp District", location: "Ulaanbaatar", year: "2022", category: "Residential", image: "/projects/olymp.jpg" },
+    { title: "Amgalan Residential Area", location: "Ulaanbaatar", year: "2022", category: "Residential", image: "/projects/amgalan.jpg" },
+    { title: "Erdenet 7th District", location: "Erdenet", year: "2021", category: "Residential", image: "/projects/erdenet7.jpg" },
+    { title: "Tsagaan Khuaran", location: "Ulaanbaatar", year: "2021", category: "Residential", image: "/projects/tsagaankhuaran.jpg" },
+    { title: "Nekhmel-8", location: "Ulaanbaatar", year: "2021", category: "Residential", image: "/projects/nekhmel8.jpg" },
+    { title: "Gashuunsukhait", location: "Umnugovi", year: "2020", category: "Industrial building", image: "/projects/gashuunsukhait.jpg" },
+    { title: "Altan Namar District", location: "Ulaanbaatar", year: "2020", category: "Residential", image: "/projects/altannamar.jpg" },
+    { title: "SGD-88", location: "Ulaanbaatar", year: "2020", category: "Office", image: "/projects/sgd88.jpg" },
+    { title: "Telmu Village", location: "Ulaanbaatar", year: "2021", category: "Private residence", image: "/projects/telmu.jpg" },
+    { title: "Dulguun Altai Apartment", location: "Ulaanbaatar", year: "2020", category: "Residential", image: "/projects/dulguun.jpg" },
+    { title: "Agarta Residence", location: "Ulaanbaatar", year: "2020", category: "Residential", image: "/projects/agarta.jpg" },
+    { title: "Consul Residence", location: "Ulaanbaatar", year: "2019", category: "Residential", image: "/projects/konsul.jpg" },
   ],
 
   projectsPage: {
@@ -437,7 +439,7 @@ const en: typeof mn = {
     projectNames: [
       "Dunjingarav District", "Olymp District", "Amgalan Residential Area", "Erdenet 7th District",
       "Tsagaan Khuaran", "Nekhmel-8", "Gashuunsukhait", "SGD-88", "Telmu Village",
-      "Dulguun Altai Apartment", "Agarta Residence", "Consul Residence",
+      "Dulguun Altai Apartment", "Agarta Residence", "Consul Residence", "Altan Namar District",
     ],
   },
 

@@ -20,9 +20,8 @@ export default function Header() {
       type="button"
       onClick={toggle}
       aria-label={lang === "mn" ? "Switch to English" : "Монгол хэл рүү шилжих"}
-      className={`inline-flex items-center gap-1.5 rounded-md border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 ${className}`}
+      className={`inline-flex items-center rounded-md border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 ${className}`}
     >
-      <span aria-hidden>🌐</span>
       {t.ui.langLabel}
     </button>
   );
@@ -33,18 +32,16 @@ export default function Header() {
       <Link
         href="/admin"
         onClick={() => setOpen(false)}
-        className={`inline-flex items-center gap-1.5 rounded-md bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800 ${className}`}
+        className={`inline-flex items-center gap-1.5 rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-brand-950 transition-colors hover:bg-accent-600 ${className}`}
       >
-        <span aria-hidden>🛠️</span>
         {t.ui.admin}
       </Link>
     ) : (
       <Link
         href="/login"
         onClick={() => setOpen(false)}
-        className={`inline-flex items-center gap-1.5 rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 ${className}`}
+        className={`inline-flex items-center gap-1.5 rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-brand-950 transition-colors hover:bg-accent-600 ${className}`}
       >
-        <span aria-hidden>👤</span>
         {t.ui.login}
       </Link>
     );
@@ -59,12 +56,7 @@ export default function Header() {
         </div>
 
         <Link href="/" className="flex flex-col items-center" onClick={() => setOpen(false)}>
-          <span className="grid h-12 w-12 place-items-center rounded-lg bg-brand-600 font-display text-lg font-bold text-white">
-            {t.company.shortName}
-          </span>
-          <span className="mt-2 hidden font-display text-lg font-bold text-slate-900 sm:block">
-            {t.company.name}
-          </span>
+          <img src="/logo.png" alt={t.company.name} className="h-10 w-auto sm:h-12" />
         </Link>
 
         {/* Баруун тал — нэвтрэх/Admin (desktop) + цэс товч (mobile) */}

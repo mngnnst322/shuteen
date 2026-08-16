@@ -18,7 +18,7 @@ export function Card({ children, className = "" }: { children: React.ReactNode; 
 export function StatCard({ icon, value, label }: { icon: string; value: string; label: string }) {
   return (
     <Card className="flex items-center gap-4">
-      <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-50 text-2xl">{icon}</span>
+      <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent-50 text-2xl">{icon}</span>
       <div>
         <div className="font-display text-2xl font-black text-slate-900">{value}</div>
         <div className="text-sm text-slate-500">{label}</div>

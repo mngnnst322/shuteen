@@ -33,7 +33,7 @@ export default async function RootLayout({
   const isAdmin = cookieStore.get(AUTH_COOKIE)?.value === "admin";
 
   return (
-    <html lang={lang} className={`${roboto.variable} h-full antialiased`}>
+    <html lang={lang} data-scroll-behavior="smooth" className={`${roboto.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         <Providers initialLang={lang} initialAdmin={isAdmin}>
           <HideOnAdmin>

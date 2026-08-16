@@ -15,7 +15,20 @@
   --brand-700: #1247ad;
   --brand-800: #143d8a;
   --brand-900: #16356f;
-  --brand-950: #0f2147;
+  --brand-950: #10294d;
+
+  /* Accent palette — шар / алтан (CTA товчлуурт) */
+  --accent-50: #fffbeb;
+  --accent-100: #fef3c7;
+  --accent-200: #fde68a;
+  --accent-300: #fcd34d;
+  --accent-400: #fbbf24;
+  --accent-500: #f4b400;
+  --accent-600: #d69e00;
+  --accent-700: #a67a00;
+  --accent-800: #7a5a00;
+  --accent-900: #5c4400;
+  --accent-950: #3d2d00;
 }
 
 @theme inline {
@@ -33,6 +46,18 @@
   --color-brand-800: var(--brand-800);
   --color-brand-900: var(--brand-900);
   --color-brand-950: var(--brand-950);
+
+  --color-accent-50: var(--accent-50);
+  --color-accent-100: var(--accent-100);
+  --color-accent-200: var(--accent-200);
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
+  --color-accent-500: var(--accent-500);
+  --color-accent-600: var(--accent-600);
+  --color-accent-700: var(--accent-700);
+  --color-accent-800: var(--accent-800);
+  --color-accent-900: var(--accent-900);
+  --color-accent-950: var(--accent-950);
 
   --font-sans: var(--font-roboto), system-ui, sans-serif;
   --font-display: var(--font-roboto), system-ui, sans-serif;

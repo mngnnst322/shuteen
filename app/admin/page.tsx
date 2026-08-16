@@ -23,7 +23,7 @@ export default function AdminDashboard() {
       <div className="mt-8">
         <div className="mb-3 flex items-center justify-between">
           <h2 className="font-display text-lg font-bold text-slate-900">Сүүлийн захиалгууд</h2>
-          <Link href="/admin/orders" className="text-sm font-medium text-brand-600 hover:text-brand-700">
+          <Link href="/admin/orders" className="text-sm font-medium text-accent-700 hover:text-accent-800">
             Бүгдийг үзэх →
           </Link>
         </div>
@@ -49,7 +49,7 @@ export default function AdminDashboard() {
         <Card>
           <h3 className="font-display font-bold text-slate-900">Түргэн үйлдэл</h3>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link href="/admin/products" className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white">
+            <Link href="/admin/products" className="rounded-lg bg-accent-500 px-4 py-2 text-sm font-medium text-brand-950">
               + Бүтээгдэхүүн нэмэх
             </Link>
             <Link href="/admin/news" className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700">

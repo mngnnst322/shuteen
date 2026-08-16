@@ -53,9 +53,16 @@ export default function ContactPage() {
               </li>
             </ul>
 
-            {/* Газрын зургийн байрлал (placeholder) */}
-            <div className="mt-8 grid aspect-video w-full place-items-center rounded-xl bg-slate-100 text-slate-400">
-              {contact.mapPlaceholder}
+            {/* Газрын зургийн байрлал — манай үйлдвэр */}
+            <div className="mt-8 aspect-video w-full overflow-hidden rounded-xl bg-slate-100">
+              <iframe
+                title={contact.mapPlaceholder}
+                src="https://www.google.com/maps?q=47.950631,106.9097126&z=16&output=embed"
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
 

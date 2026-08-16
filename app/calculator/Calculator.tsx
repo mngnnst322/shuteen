@@ -228,7 +228,7 @@ export function Calculator() {
           <a
             href="/contact"
             data-selection={JSON.stringify(selection)}
-            className="mt-6 block rounded-full bg-brand-600 px-6 py-3 text-center font-semibold text-white hover:bg-brand-700"
+            className="mt-6 block rounded-full bg-accent-500 px-6 py-3 text-center font-semibold text-brand-950 hover:bg-accent-600"
           >
             {c.orderButton}
           </a>

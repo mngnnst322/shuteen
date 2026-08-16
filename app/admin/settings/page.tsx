@@ -1,7 +1,7 @@
 import { AdminTitle, Card, MockNote } from "../ui";
 import { company } from "../../lib/site";
 
-const field = "mt-1 w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100";
+const field = "mt-1 w-full rounded-lg border border-slate-200 px-4 py-2.5 text-sm outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-100";
 
 export default function AdminSettings() {
   return (
@@ -32,7 +32,7 @@ export default function AdminSettings() {
             <label className="text-sm font-medium text-slate-700">Хаяг</label>
             <input defaultValue={company.address} className={field} />
           </div>
-          <button className="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-medium text-white">
+          <button className="rounded-lg bg-accent-500 px-5 py-2.5 text-sm font-medium text-brand-950">
             Хадгалах
           </button>
         </div>
